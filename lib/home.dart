@@ -20,6 +20,10 @@ class Home extends StatelessWidget {
               title: Text("LogOut"),
               onTap: () {},
             ),
+            ListTile(
+              title: Text("LogOut"),
+              onTap: () {},
+            ),
           ],
         ),
       ),
