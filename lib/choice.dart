@@ -11,14 +11,14 @@ class Choice extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            ElevatedButton(
+            TextButton(
               onPressed: () {
                 Navigator.pushNamed(context, ChoiceClass.routeName,
                     arguments: "Teachers");
               },
               child: Text("Teachers"),
             ),
-            ElevatedButton(
+            TextButton(
               onPressed: () {
                 Navigator.pushNamed(context, ChoiceClass.routeName,
                     arguments: "Students");

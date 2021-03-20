@@ -55,7 +55,10 @@ class _UploadVideoState extends State<UploadVideo> {
           children: [
             _video == null
                 ? Text("No image Selected.")
-                : BetterPlayer.file(_video.path),
+                : BetterPlayer.file(
+                    _video.path,
+                    betterPlayerConfiguration: BetterPlayerConfiguration(),
+                  ),
             ElevatedButton(
               onPressed: () {
                 uploadVideos(lol, _video);

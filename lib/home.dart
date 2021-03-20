@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:kjsieit_flutter/Detail/detail.dart';
+import 'package:kjsieit_flutter/theme/theme_button.dart';
 
 // ignore: must_be_immutable
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   static String routeName = "/home";
+
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  bool state = true;
   List<String> subjects = ["Maths", "BEE", "EM", "Physics", "Chemistry"];
 
   @override
@@ -14,17 +22,16 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       drawer: Drawer(
-        child: ListView(
-          children: [
-            ListTile(
-              title: Text("LogOut"),
-              onTap: () {},
-            ),
-            ListTile(
-              title: Text("LogOut"),
-              onTap: () {},
-            ),
-          ],
+        child: SafeArea(
+          child: ListView(
+            children: [
+              ListTile(
+                title: Text("LogOut"),
+                onTap: () {},
+              ),
+              ChangeThemeButton()
+            ],
+          ),
         ),
       ),
       body: ListView.builder(

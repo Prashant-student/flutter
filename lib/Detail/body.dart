@@ -21,7 +21,7 @@ Widget buildBody(var image, var subject) {
                 itemCount: snapshot.data.length,
                 itemBuilder: (context, index) {
                   if (snapshot.data[index].id == "text") {
-                    return Text(snapshot.data[index].text);
+                    return Card(child: Text(snapshot.data[index].text));
                   }
                   if (snapshot.data[index].id == "video") {
                     return BetterPlayer.network(
@@ -31,11 +31,11 @@ Widget buildBody(var image, var subject) {
                   if (snapshot.data[index].id == "image") {
                     print(snapshot.data[index].image);
                     if (snapshot.data[index].image != null) {
+                      print("object");
                       return Image.network(snapshot.data[index].image);
                     }
-                    return SizedBox.shrink();
+                    return Container();
                   }
-                  return SizedBox.shrink();
                 },
               );
             }
